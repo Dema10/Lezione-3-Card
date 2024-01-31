@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comfortaa", sans-serif;
+}
+
+.ragnatela {
+    width: 900px;
+    height: 960px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    width: 375px;
+    height: 537px;
+    border: 2px solid #024bba;
+    background-image: url(Spidey.webp);
+    border-radius: 25px;
+    box-shadow: 10px 10px 12px lightblue;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.save {
+    position: absolute;
+    right: 20px;
+    top: -50px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 15px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: top 0.3s ease-in-out;
+}
+
+.button {
+    position: absolute;
+    bottom: -40px;
+    padding: 10px 15px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: bottom 0.2s ease-in-out
+}
+
+.button div {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 39px;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 25px;
+    background-color: #024bba;
+    padding: 5px 15px;
+    color: white;
+    font-size: 18px;
+}
+
+.card:hover .save {
+    top: 20px;
+}
+
+.card:hover .button {
+    bottom: 15px;
+    opacity: 1;
+}

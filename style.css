@@ -9,23 +9,26 @@ body {
 }
 
 .ragnatela {
-    width: 900px;
-    height: 960px;
+    width: 375px;
+    height: 537px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(assets/ragnatela3.avif);
+    transition: 0.3s;
+    border-radius: 25px;
 }
 
 .card {
     width: 375px;
     height: 537px;
     border: 2px solid #024bba;
-    background-image: url(Spidey.webp);
+    background-image: url(assets/Spidey.webp);
     border-radius: 25px;
-    box-shadow: 10px 10px 12px lightblue;
+    box-shadow: 0px 0px 10px 10px lightskyblue;
     position: relative;
     top: 50%;
     left: 50%;
@@ -67,6 +70,16 @@ body {
     font-size: 18px;
     opacity: 0,8;
     transition: opacity 0.4s;
+}
+
+.ragnatela:hover {
+    width: 900px;
+    height: 960px;
+    box-shadow: 0 0 12px 10px lightcoral;
+}
+
+.card:hover {
+    box-shadow: none;
 }
 
 .card:hover .save {

@@ -6,7 +6,6 @@
 
 body {
     font-family: "Comfortaa", sans-serif;
-    background-color: #e93f33;
 }
 
 .ragnatela {
@@ -76,7 +75,7 @@ body {
 .ragnatela:hover {
     width: 700px;
     height: 750px;
-    box-shadow: 0 0 12px 10px lightyellow;
+    box-shadow: 0 0 12px 10px lightcoral;
 }
 
 .card:hover {

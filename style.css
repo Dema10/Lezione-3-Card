@@ -92,3 +92,18 @@ body {
 .button div:hover {
     opacity: 1;
 }
+
+@keyframes ragnateleAnimation {
+    to {
+        transform: translate(0, 100%);
+    }
+}
+
+.ragnatele-container {
+    position: absolute;
+    animation: coriandoliAnimation 2s linear;
+}
+
+.ragnatele {
+    position: absolute;
+}

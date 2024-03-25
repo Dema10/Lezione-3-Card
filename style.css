@@ -20,6 +20,7 @@ body {
     background-image: url(assets/ragnatela3.avif);
     transition: 0.3s;
     border-radius: 25px;
+    z-index: 10;
 }
 
 .card {
@@ -106,4 +107,8 @@ body {
 
 .ragnatele {
     position: absolute;
+}
+
+#myAudio {
+    display: none;
 }

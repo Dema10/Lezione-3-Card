@@ -1,27 +1,37 @@
 
 let ragnatela = document.querySelector(".ragnatela");
 let intervalId = null;
+let indiceRagnatela = [];
 
 ragnatela.addEventListener("mouseover", function () {
     intervalId = setInterval(creareRagnatele, 150);
     console.log("creareRagnatele");
+    playAudio()
 });
 
 
 
 ragnatela.addEventListener("mouseout", function () {
   clearInterval(intervalId);
-  let ragnateleDelete = document.body.querySelectorAll(".ragnatele-container");
+  indiceRagnatela.forEach(function (ragnateleContainer) {
+    document.body.removeChild(ragnateleContainer);
+  });
+  indiceRagnatela = [];
+/*   let ragnateleDelete = document.body.querySelectorAll(".ragnatele-container");
   console.log(ragnateleDelete);
   ragnateleDelete.forEach(ragna =>{
     ragna.remove;
-  })
+  }) */
   /* for(let i = 0; ragnateleDelete.lenght < i; i++) {
     console.log(ragnateleDelete[i]);
     ragnateleDelete[i].remove;
   } */
 });
 
+function playAudio() {
+  const myAudio = document.getElementById('myAudio');
+  myAudio.play();
+}
 
 
 function creareRagnatele() {
@@ -508,6 +518,14 @@ function creareRagnatele() {
   document.body.appendChild(ragnateleContainer);
 
   ragnateleContainer.addEventListener('animationend', function () {
-      document.body.removeChild(ragnateleContainer);
+    document.body.removeChild(ragnateleContainer);
+    // questo codice serve a controllare e a lasciare in memoria solo le ragnatele già presenti in pagina
+    const tela = indiceRagnatela.indexOf(ragnateleContainer);
+    if (tela !== -1) {
+        indiceRagnatela.splice(tela, 1);
+    }
   });
+
+  // contatore di tutte le ragnatele generate
+  indiceRagnatela.push(ragnateleContainer);
 }

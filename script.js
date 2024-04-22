@@ -43,10 +43,7 @@ function creareRagnatele() {
 
   let inizioX = Math.random() * window.innerWidth;
   let inizioY = Math.random() * window.innerHeight;
-  let forma = Math.random() * 15 + 10;
-  
-  ragnatele.style.width = forma + 'px';
-  ragnatele.style.height = forma + 'px';
+
   ragnatele.style.pointerEvents = 'none';
   ragnatele.style.opacity = 0.8;
 
